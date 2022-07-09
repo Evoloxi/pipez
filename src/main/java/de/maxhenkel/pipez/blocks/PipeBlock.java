@@ -98,7 +98,7 @@ public abstract class PipeBlock extends Block implements IItemBlock, SimpleWater
     }
 
     public InteractionResult onWrenchClicked(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit, Direction side) {
-        if (!player.isShiftKeyDown()) {
+        if (player.isShiftKeyDown()) {
             return InteractionResult.PASS;
         }
         if (side != null) {
